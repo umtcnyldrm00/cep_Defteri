@@ -180,6 +180,64 @@
         </androidx.cardview.widget.CardView>
 
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewCompute"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/viewBuying"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="Hesaplar"
+                android:textSize="25sp" />
+
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/calculate" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewStocks"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/viewCosts"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/viewCompute"
+            android:clickable="true"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="Stoklar"
+                android:textSize="25sp" />
+
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center|top"
+
+                android:layout_marginTop="7dp"
+                android:background="@drawable/stocks" />
+
+        </androidx.cardview.widget.CardView>
+
+
     </RelativeLayout>
 
 
