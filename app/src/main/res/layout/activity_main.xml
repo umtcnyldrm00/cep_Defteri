@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#E7E7E7"
+    android:background="@color/light_gray"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -304,9 +304,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="30dp"
-                android:layout_marginBottom="15dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="230dp"
+                android:layout_marginBottom="15dp"
                 android:clickable="true"
                 app:cardCornerRadius="20dp">
 
@@ -328,7 +328,6 @@
             </androidx.cardview.widget.CardView>
 
 
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/viewSettings"
                 android:layout_width="150dp"
@@ -337,9 +336,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="230dp"
-                android:layout_marginBottom="15dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
+                android:layout_marginBottom="15dp"
                 android:layout_toRightOf="@+id/viewReports"
                 android:clickable="true"
                 app:cardCornerRadius="20dp">
@@ -360,7 +359,6 @@
                     android:background="@drawable/settings" />
 
             </androidx.cardview.widget.CardView>
-
 
 
         </RelativeLayout>
