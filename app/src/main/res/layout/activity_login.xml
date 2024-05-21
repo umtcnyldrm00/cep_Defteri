@@ -1,122 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_marginTop="80dp"
-        android:scaleX="1.7"
-        android:scaleY="1.7"
-        android:src="@drawable/cepdefteripng" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewLogin"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginRight="20dp"
-        app:cardCornerRadius="20dp">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <ImageView
+            android:layout_width="640dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/test" />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-black"
+                android:layout_gravity="center"
+                android:layout_marginTop="150dp"
                 android:text="Giriş Yap"
-                android:textSize="45sp" />
+                android:textSize="50sp" />
 
             <EditText
-                android:id="@+id/editTextMail"
+                android:id="@+id/editTextLoginEmail"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginRight="20dp"
-                android:drawableStart="@drawable/baseline_alternate_email_24"
-                android:drawablePadding="7dp"
-                android:ems="10"
-                android:fontFamily="sans-serif"
-                android:hint="Eposta Adresiniz"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:background="@drawable/textshape"
+                android:hint="Eposta"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:textSize="25sp" />
 
             <EditText
+                android:id="@+id/editTextLoginPassword"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@id/editTextMail"
+                android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:drawableStart="@drawable/baseline_enhanced_encryption_24"
-                android:drawablePadding="10dp"
-                android:ems="10"
-                android:fontFamily="sans-serif"
-                android:hint="Şifreniz"
-                android:inputType="text"
-                android:textColor="@color/black"
+                android:background="@drawable/textshape"
+                android:hint="Şifre"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/LoginButton"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#191919"
+                android:text="Giriş Yap"
                 android:textSize="30sp" />
 
-
-        </RelativeLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@id/cardViewLogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:backgroundTint="#25373D"
-        android:text="GİRİŞ YAP"
-        android:textSize="35dp" />
-
-    <TextView
-        android:id="@+id/textViewForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnLogin"
-        android:layout_centerHorizontal="true"
-        android:clickable="true"
-        android:focusable="false"
-        android:minHeight="48dp"
-        android:text="Şifreni mi unuttun ?"
-        android:textIsSelectable="false"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/createNewAccountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="false"
+                android:text="@string/create_account"
+                android:textSize="20sp" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:focusable="false"
-        android:text="@string/create_account"
-        android:textIsSelectable="false"
-        android:textSize="20sp" />
+        </LinearLayout>
 
 
-</RelativeLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -28,35 +28,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kayıt Ol"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="150dp"
-                android:textSize="50sp"/>
+                android:text="Kayıt Ol"
+                android:textSize="50sp" />
 
 
             <EditText
+                android:id="@+id/editTextMail"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/textshape"
                 android:hint="Eposta"
+                android:inputType="textEmailAddress"
                 android:paddingStart="10dp"
                 android:textSize="25sp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/textshape"
-                android:hint="Eposta(Yeniden)"
-                android:paddingStart="10dp"
-                android:textSize="25sp" />
+
 
             <EditText
+                android:id="@+id/editTextPass"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
@@ -64,21 +58,14 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/textshape"
                 android:hint="Şifre"
+                android:inputType="textPassword"
                 android:paddingStart="10dp"
                 android:textSize="25sp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/textshape"
-                android:hint="Şifre(Yeniden)"
-                android:paddingStart="10dp"
-                android:textSize="25sp" />
+
 
             <EditText
+                android:id="@+id/editTextPhone"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
@@ -86,6 +73,7 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/textshape"
                 android:hint="Telefon"
+                android:inputType="phone"
                 android:paddingStart="10dp"
                 android:textSize="25sp" />
 
@@ -103,11 +91,12 @@
 
 
             <TextView
+                android:id="@+id/editTextExistedUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="@string/login_account"
-                android:textSize="20sp"
-                android:layout_gravity="center"/>
+                android:textSize="20sp" />
 
 
         </LinearLayout>

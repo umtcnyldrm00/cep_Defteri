@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.pulsetech.cepdefteri" />
+                  <option name="mobileSdkAppId" value="1:752853176997:android:47c2c76f4770e78898334c" />
+                  <option name="projectId" value="cepdefteridatabase" />
+                  <option name="projectNumber" value="752853176997" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
