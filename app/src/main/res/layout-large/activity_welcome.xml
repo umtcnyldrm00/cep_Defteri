@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -13,46 +12,41 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="640dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/test" />
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="500dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
 
-    <TextView
-        android:id="@+id/welcomeMessageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:clickable="false"
-        android:focusable="false"
-        android:text="Main"
-        android:layout_centerInParent="true"
-        android:textSize="50sp" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/motto"
-        android:textSize="30sp"
-        android:textStyle="italic"
-        android:clickable="false"
-        android:focusable="false"
-        android:layout_below="@+id/welcomeMessageText"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"/>
-
-</RelativeLayout>
+            <TextView
+                android:id="@+id/welcomeMessageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Large"
+                android:textSize="50sp" />
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcomeMessageText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@string/motto"
+                android:textSize="30sp"
+                android:textStyle="italic" />
 
-
-
+        </RelativeLayout>
 
 
         <RelativeLayout
