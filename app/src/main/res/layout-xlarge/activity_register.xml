@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="150dp"
-            android:text="Kayıt Ol"
+            android:text="Xlarge Laoyut"
             android:textSize="70sp" />
 
         <EditText
@@ -28,6 +28,7 @@
             android:layout_width="500dp"
             android:layout_height="70dp"
             android:layout_below="@id/textRegister"
+            android:layout_centerInParent="true"
             android:layout_marginStart="100dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
@@ -37,26 +38,13 @@
             android:paddingStart="10dp"
             android:textSize="25sp" />
 
-        <EditText
-            android:id="@+id/editTextSurName"
-            android:layout_width="500dp"
-            android:layout_height="70dp"
-            android:layout_below="@id/textRegister"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="100dp"
-            android:layout_toEndOf="@id/editTextName"
-            android:background="@drawable/textshape"
-            android:hint="Soyadınız"
-            android:inputType="text"
-            android:paddingStart="10dp"
-            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/editTextMail"
-            android:layout_width="match_parent"
+            android:layout_width="500dp"
             android:layout_height="70dp"
             android:layout_below="@id/editTextName"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
@@ -69,9 +57,10 @@
 
         <EditText
             android:id="@+id/editTextPass"
-            android:layout_width="match_parent"
+            android:layout_width="500dp"
             android:layout_height="70dp"
             android:layout_below="@id/editTextMail"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
@@ -84,11 +73,12 @@
 
         <Button
             android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
+            android:layout_width="500dp"
             android:layout_height="80dp"
             android:layout_below="@id/editTextPass"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="#191919"

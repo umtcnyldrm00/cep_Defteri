@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "162222946128",
+    "project_id": "cepdefteridatabase-18294",
+    "storage_bucket": "cepdefteridatabase-18294.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162222946128:android:93cedb405a53230e7ade55",
+        "android_client_info": {
+          "package_name": "com.pulsetech.cepdefteri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGvif1X42GHDoFuSJErYopg0IvfJ6UyvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

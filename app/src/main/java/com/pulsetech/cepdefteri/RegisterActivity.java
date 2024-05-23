@@ -27,7 +27,7 @@ import java.util.HashMap;
 public class RegisterActivity extends AppCompatActivity {
 
     private Button btnRegister;
-    private EditText editEmail, editPassword, editName, editSurname;
+    private EditText editEmail, editPassword, editName;
     private TextView existingUserTextView;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
@@ -42,11 +42,11 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
         mReference = FirebaseDatabase.getInstance().getReference();
+
         btnRegister = findViewById(R.id.btnRegister);
         editEmail = findViewById(R.id.editTextMail);
         editPassword = findViewById(R.id.editTextPass);
         editName = findViewById(R.id.editTextName);
-        editSurname = findViewById(R.id.editTextSurName);
         existingUserTextView = findViewById(R.id.editTextExistedUser);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -67,12 +67,14 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     void KayitOl() {
+        mData = new HashMap<>();
+        String name = editName.getText().toString();
         String email = editEmail.getText().toString();
         String password = editPassword.getText().toString();
-        String name = editName.getText().toString();
-        String surname = editSurname.getText().toString();
 
-        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+
+        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && !name.isEmpty()) {
+
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -81,34 +83,42 @@ public class RegisterActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 mUser = mAuth.getCurrentUser();
                                 mData = new HashMap<>();
-                                mData.put("kullaniciAdı", name);
-                                mData.put("KullanıcıSoyad", surname);
+                                mData.put("userName", name);
                                 mData.put("Email", email);
-                                mData.put("Şifre", password);
                                 mData.put("UID", mUser.getUid());
 
+                                mReference.child(mUser.getUid()).setValue(mData)
 
-                                mReference.child("Kullanıcılar").child(mUser.getUid())
-                                        .setValue(mData)
                                         .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
-
                                                 if (task.isSuccessful()) {
-                                                    Toast.makeText(RegisterActivity.this, "Database Kayıt işlemi tamamlandı!", Toast.LENGTH_SHORT).show();
 
-                                                } else
+                                                    Toast.makeText(RegisterActivity.this, "Kullanıcı başarıyla oluşturuldu!", Toast.LENGTH_SHORT).show();
+                                                    Log.d("RegisterActivity", "Veritabanına veri başarıyla eklendi!");
+                                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+
+                                                } else {
+                                                    Log.e("RegisterActivity", "Veritabanına veri eklenirken hata oluştu: " + task.getException().getMessage());
                                                     Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-
+                                                }
                                             }
+
                                         });
 
-                            }
+
+                            } else
+                                Log.e("TAG", "Firebase Authentication sırasında hata oluştu: " + task.getException().getMessage());
+                            Toast.makeText(RegisterActivity.this, "Kullanıcı oluşturulurken bir hata oluştu", Toast.LENGTH_SHORT).show();
 
                         }
                     });
+
         } else {
-            Toast.makeText(RegisterActivity.this, "Email veya Şifre boş olamaz.", Toast.LENGTH_SHORT).show();
+
+            Toast.makeText(RegisterActivity.this, "lütfen istenilen tüm bilgileri doldurunuz..", Toast.LENGTH_SHORT).show();
         }
+
+
     }
 }

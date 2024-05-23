@@ -30,37 +30,23 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="100dp"
-                android:text=" Large"
+                android:text=" LargeLayout"
                 android:textSize="40sp" />
 
             <EditText
                 android:id="@+id/editTextName"
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_below="@id/textRegister"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/textshape"
                 android:hint="Adınız"
                 android:inputType="text"
                 android:paddingStart="10dp"
                 android:textSize="25sp" />
 
-            <EditText
-                android:id="@+id/editTextSurName"
-                android:layout_width="180dp"
-                android:layout_height="70dp"
-                android:layout_below="@id/textRegister"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="20dp"
-                android:layout_toEndOf="@id/editTextName"
-                android:background="@drawable/textshape"
-                android:hint="Soyadınız"
-                android:inputType="text"
-                android:paddingStart="10dp"
-                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextMail"
