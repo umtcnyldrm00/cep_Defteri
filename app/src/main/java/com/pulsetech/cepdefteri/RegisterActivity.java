@@ -107,10 +107,10 @@ public class RegisterActivity extends AppCompatActivity {
                                         });
 
 
-                            } else
+                            } else {
                                 Log.e("TAG", "Firebase Authentication sırasında hata oluştu: " + task.getException().getMessage());
-                            Toast.makeText(RegisterActivity.this, "Kullanıcı oluşturulurken bir hata oluştu", Toast.LENGTH_SHORT).show();
-
+                                Toast.makeText(RegisterActivity.this, "Kullanıcı oluşturulurken bir hata oluştu", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
 
