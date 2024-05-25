@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.pulsetech.cepdefteri" />
-                  <option name="mobileSdkAppId" value="1:752853176997:android:47c2c76f4770e78898334c" />
-                  <option name="projectId" value="cepdefteridatabase" />
-                  <option name="projectNumber" value="752853176997" />
+                  <option name="mobileSdkAppId" value="1:162222946128:android:93cedb405a53230e7ade55" />
+                  <option name="projectId" value="cepdefteridatabase-18294" />
+                  <option name="projectNumber" value="162222946128" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

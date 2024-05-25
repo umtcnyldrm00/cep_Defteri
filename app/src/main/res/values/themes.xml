@@ -6,4 +6,10 @@
     <style name="Theme.CepDefteri" parent="Base.Theme.CepDefteri" />
 
 
+    <!-- Custom button style -->
+    <style name="CustomButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/black</item>
+    </style>
+
+
 </resources>
