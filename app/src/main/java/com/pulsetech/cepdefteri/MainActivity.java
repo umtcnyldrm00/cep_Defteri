@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     CardView cardViewCustomers, cardViewSuppliers, cardViewProducts, cardViewSales, cardViewBuying,
-            cardViewCosts, cardViewCompute, cardViewStocks, cardViewReports, cardViewSettings;
+            cardViewCosts, cardViewCompute, cardViewStocks, cardViewReports;
 
 
     @Override
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         cardViewCompute = findViewById(R.id.viewCompute);
         cardViewStocks = findViewById(R.id.viewStocks);
         cardViewReports = findViewById(R.id.viewReports);
-        cardViewSettings = findViewById(R.id.viewSettings);
+
 
 
 

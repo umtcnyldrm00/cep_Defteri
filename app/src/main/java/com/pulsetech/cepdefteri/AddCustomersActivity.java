@@ -1,5 +1,6 @@
 package com.pulsetech.cepdefteri;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -32,7 +34,7 @@ public class AddCustomersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_customers);
 
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
         customerName = findViewById(R.id.editTextCustomerName);
         Phone = findViewById(R.id.editTextPhone);
         editTextAddress = findViewById(R.id.editTextAddress);
@@ -54,6 +56,10 @@ public class AddCustomersActivity extends AppCompatActivity {
 
 
     void Database() {
+        mData = new HashMap<>();
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference();
 
         String CustomerName = customerName.getText().toString();
         String PhoneNumber = Phone.getText().toString();
@@ -61,7 +67,7 @@ public class AddCustomersActivity extends AppCompatActivity {
         String Tax = Taxes.getText().toString();
         String Identity = IdentityNo.getText().toString();
         String MailAddress = Mail.getText().toString();
-        mData = new HashMap<>();
+
 
         mData.put("CustomerName", CustomerName);
         mData.put("PhoneNumber", PhoneNumber);
@@ -70,7 +76,7 @@ public class AddCustomersActivity extends AppCompatActivity {
         mData.put("Identity", Identity);
         mData.put("MailAddress", MailAddress);
 
-        database.getReference().setValue(mData)
+        myRef.setValue(mData)
                 .addOnCompleteListener(AddCustomersActivity.this, new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -78,6 +84,8 @@ public class AddCustomersActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(AddCustomersActivity.this, "Müşteri başarıyla eklendi!", Toast.LENGTH_SHORT).show();
                             Log.d("TAG", "Veritabanına veri başarıyla eklendi!");
+                            startActivity(new Intent(AddCustomersActivity.this, CustomersActivity.class));
+
                         } else {
                             Toast.makeText(AddCustomersActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
